@@ -3,10 +3,12 @@ import {
     Column,
     PrimaryColumn,
     CreateDateColumn,
-    UpdateDateColumn
+    UpdateDateColumn,
+    Index,
 } from "typeorm";
 import { v4 as uuid } from "uuid";
 
+@Index(["username", "email"], { unique: true })
 @Entity("users")
 class User {
 
