@@ -1,11 +1,11 @@
-import { CreateUserDTOS } from "../../dtos/CreateUserDTOS";
+import { CreateUserDTO} from "../../dtos/CreateUserDTO";
 import { getCustomRepository } from "typeorm";
 import { UserRepositories } from "../../repositories/UserRepositories";
 import { User } from "../../entity/User";
 
 class CreateUserService {
 
-    async execute({ name, username, email, password, phone }: CreateUserDTOS): Promise<User> {
+    async execute({ name, username, email, password, phone }: CreateUserDTO): Promise<User> {
 
         const userRepositories = getCustomRepository(UserRepositories);
 
