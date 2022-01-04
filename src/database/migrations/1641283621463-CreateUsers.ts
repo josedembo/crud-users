@@ -1,4 +1,4 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import { MigrationInterface, QueryRunner, Table, Unique } from "typeorm";
 
 export class CreateUsers1641283621463 implements MigrationInterface {
 
@@ -17,11 +17,13 @@ export class CreateUsers1641283621463 implements MigrationInterface {
                 },
                 {
                     name: "username",
-                    type: "varchar"
+                    type: "varchar",
+                    isUnique: true
                 },
                 {
                     name: "email",
-                    type: "varchar"
+                    type: "varchar",
+                    isUnique: true
                 },
                 {
                     name: "password",
