@@ -1,4 +1,4 @@
-import { CreateUserService } from "../../service/user/CreateUserService";
+import { CreateUserService } from "../../../service/user/CreateUserService";
 import { NextFunction, Request, Response } from "express";
 import { StatusCodes } from "http-status-codes";
 
